@@ -5,14 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>vue-email-list</title>
 </head>
 
 <body>
-    <h1>Lista di email generate</h1>
-    <ul id="email-list"></ul>
 
+    <div id="app">
+        <h1>Lista di email:</h1>
+        <ul>
+            <li v-for="email in mailList" :key="email">
+                {{ email }}
+            </li>
+        </ul>
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+        integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- js -->
     <script src="./js/script.js"></script>
 </body>
 
